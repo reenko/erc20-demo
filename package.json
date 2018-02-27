@@ -1,0 +1,40 @@
+{
+  "name": "erc20-demo",
+  "version": "0.0.1",
+  "description": "ERC20 DemoToken",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "fix:js": "eslint --fix test/**/*.js migrations/**/*.js",
+    "lint:js": "eslint test/**/*.js migrations/**/*.js",
+    "lint:sol": "solhint contracts/*.sol contracts/*/*.sol test/*.sol test/*/*.sol",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "test": "npm run lint && truffle test",
+    "merge": "node node_modules/sol-merger/bin/sol-merger.js './contracts/**/*.sol' ./merge"
+  },
+  "keywords": [
+    "ethereum",
+    "erc20"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "truffle": "4.0.5",
+    "zeppelin-solidity": "^1.6.0",
+    "sol-merger": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "4.13.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-node": "5.1.0",
+    "eslint-plugin-react": "7.5.1",
+    "solhint": "1.1.10"
+  }
+}
